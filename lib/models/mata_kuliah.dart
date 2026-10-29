@@ -7,6 +7,8 @@ class MataKuliah {
     required this.jam,
     required this.ruangan,
     required this.dosen,
+    this.semester = 'Ganjil',
+    this.tahunAjaran = '2026/2027',
   });
 
   final String kode;
@@ -16,4 +18,8 @@ class MataKuliah {
   final String jam;
   final String ruangan;
   final String dosen;
+  final String semester;
+  final String tahunAjaran;
+
+  bool get isOnline => ruangan.toLowerCase().contains('online');
 }
